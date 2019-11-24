@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>
+    Daily Summary for {{ name.capitalize() }}
+</h1>
+
+<table>
+    <tr>
+        <th>Total Solved:</th>
+        <td>{{ total_solved }}</td>
+    </tr>
+    <tr>
+        <th>Total Attempts:</th>
+        <td>{{ total_attempts }}</td>
+    </tr>
+    <tr>
+        <th>Average Solve Time:</th>
+        <td>{{ "{:0.3f}".format(avg_solve_time) }} seconds</td>
+    </tr>
+</table>
+
+<br>
+
+<table>
+    <title>Problem Details:</title>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Problem</th>
+            <th>Solution</th>
+            <th>Attempts</th>
+            <th>Elapsed Time</th>
+        </tr>
+    </thead>
+    {% for problem in problems %}
+        <tr>
+            <td>{{ problem.id }}</td>
+            <td>{{ problem.problem }}</td>
+            <td>{{ problem.solution }}</td>
+            <td>{{ problem.attempts }}</td>
+            <td>{{ "{:0.3f}".format(problem.elapsed) }}</td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

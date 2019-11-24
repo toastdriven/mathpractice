@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div id="choose_name">
+        <h1>Who are you?</h1>
+
+        <ul>
+            {% for name in names %}
+            <li>
+                <h2>
+                    <a href="/{{ name }}/">{{ name.capitalize() }}</a>
+                </h2>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

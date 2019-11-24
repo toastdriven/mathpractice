@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>Choose problem type:</p>
+
+<ol>
+    {% for level in difficulties %}
+    <li>
+        <a href="{{ level.url }}">{{ level.name }}</a>
+        <em>[{{ level.difficulty }}]</em>
+    </li>
+    {% endfor %}
+</ol>
+{% endblock %}

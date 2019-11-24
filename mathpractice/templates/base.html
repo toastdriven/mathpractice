@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Math Practice</title>
+        <link href="/static/css/default.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="column">
+            <header>
+                <ul>
+                    <li>Math Practice</li>
+                    {% if name %}
+                    <li><a href="/{{ name }}/">{{ name.capitalize() }}</a></li>
+                    <li><a href="/{{ name }}/summary/">Summary</a></li>
+                    {% endif %}
+                </ul>
+            </header>
+
+            <content>
+                {% block content %}
+                {% endblock %}
+            </content>
+        </div>
+
+        <div id="extra_js">
+            {% block extra_js %}{% endblock %}
+        </div>
+    </body>
+</html>

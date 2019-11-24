@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p>Problem:</p>
+
+    <p class="giant">
+        {{ problem.problem }} =
+        <form method="post" action="." class="math_problem">
+            <input type="text" name="answer" id="id_answer">
+            <input type="submit" value="Submit answer">
+        </form>
+    </p>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/static/js/maths.js" type="text/javascript"></script>
+{% endblock %}

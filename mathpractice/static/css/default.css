@@ -1,0 +1,109 @@
+/* @tailwind base; */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14pt;
+    text-align: center;
+}
+
+div#column {
+    margin: 0 auto;
+    text-align: left;
+    width: 600px;
+}
+
+h1, h2, h3 {
+    margin: 0px 0px 15px 0px;
+}
+
+p, ul, ol {
+    margin: 0 0 10px 0;
+}
+
+header {
+    border-bottom: 2px solid #cccccc;
+    margin: 20px 0 20px 0;
+}
+
+header ul {
+    list-style: none;
+    font-size: 10pt
+}
+
+header ul li {
+    display: inline;
+    padding: 0 10px 0 0;
+}
+
+header ul li:after {
+    content: " >";
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+header ul li:last-child:after {
+    content: "";
+}
+
+content #choose_name {
+    margin-top: 50px;
+}
+
+content #choose_name h1 {
+    margin-bottom: 40px;
+}
+
+content #choose_name ul li {
+    margin-bottom: 30px;
+}
+
+#choose_name h1 em {
+    font-weight: normal;
+    font-size: 12pt;
+}
+
+content ol,
+content ul {
+    margin-left: 20px;
+}
+
+p.giant {
+    font-size: 62pt;
+    padding: 40px 0 40px 0;
+}
+
+.math_problem #id_answer {
+    font-size: 22pt;
+    padding: 10px;
+    width: 200px;
+}
+
+.math_problem input[type=submit] {
+    background-color: #5555FF;
+    border: 0px solid #5555FF;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 18pt;
+    padding: 10px 20px;
+    margin: 0px 20px;
+}
+
+table {
+    margin: 0 0 20px 0;
+    text-align: left;
+}
+
+table thead tr th,
+table tbody tr th,
+table tbody tr td {
+    padding: 0 20px 5px 0;
+}
+
+#extra_js {
+    display: none;
+}
