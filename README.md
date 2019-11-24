@@ -18,6 +18,13 @@ To help my kids practice their basic math skills.
 > **DO NOT EXPOSE THIS ON THE BROADER INTERNET!**
 
 
+## Images
+
+![choices](./readme_images/choices.png)
+![problem](./readme_images/problem.png)
+![summary](./readme_images/summary.png)
+
+
 ## Setup
 
 ```
