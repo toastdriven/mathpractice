@@ -36,6 +36,8 @@ $ python
 
 ```
 $ pipenv shell
+
+# Export the valid names to be displayed in the app.
 $ export APP_NAMES="daniel,john,jane"
 
 # Optional, to enable debug mode.
