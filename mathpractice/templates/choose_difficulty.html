@@ -9,7 +9,7 @@
     {% for level in difficulties %}
     <li>
         <a href="{{ level.url }}">{{ level.name }}</a>
-        <em>[{{ level.difficulty }}]</em>
+        <em>[{{ level.difficulty }} - {{ level.points }}pts]</em>
     </li>
     {% endfor %}
 </ol>

@@ -81,6 +81,11 @@ def difficulty_1():
 
     number_1 = random.randint(0, 12)
     number_2 = random.randint(0, 12)
+
+    # Ensure the bigger number is on top, so as not to worry about
+    # negative numbers.
+    number_1, number_2 = max([number_1, number_2]), min([number_1, number_2])
+
     return generate_problem_and_solution(operations, number_1, number_2)
 
 
@@ -311,36 +316,43 @@ def choose_difficulty(request, name):
                 "url": "/{}/difficulty/1/".format(name),
                 "name": "Simple Addition/Subtraction",
                 "difficulty": "Easy",
+                "points": 1,
             },
             {
                 "url": "/{}/difficulty/2/".format(name),
                 "name": "Multiplication (Times Tables)",
                 "difficulty": "Easy",
+                "points": 1,
             },
             {
                 "url": "/{}/difficulty/3/".format(name),
                 "name": "Simple Division",
                 "difficulty": "Easy",
+                "points": 1,
             },
             {
                 "url": "/{}/difficulty/4/".format(name),
                 "name": "Bigger Addition",
                 "difficulty": "Medium",
+                "points": 3,
             },
             {
                 "url": "/{}/difficulty/5/".format(name),
                 "name": "Bigger Subtraction",
                 "difficulty": "Medium",
+                "points": 3,
             },
             {
                 "url": "/{}/difficulty/6/".format(name),
                 "name": "Multiplication",
                 "difficulty": "Medium",
+                "points": 3,
             },
             {
                 "url": "/{}/difficulty/7/".format(name),
                 "name": "Division",
                 "difficulty": "Hard",
+                "points": 5,
             },
         ],
         "progress": progress,
