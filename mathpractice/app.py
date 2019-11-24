@@ -9,7 +9,6 @@ Setup:
 import datetime
 import os
 import random
-import time
 
 import itty3
 import jinja2

@@ -7,6 +7,8 @@ verify_ssl = true
 
 [packages]
 itty3 = "*"
+peewee = "*"
+jinja2 = "*"
 
 [requires]
 python_version = "3.7"
