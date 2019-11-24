@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p>Choose problem type:</p>
+{% include "includes/progress_bar.html" %}
+
+<h1>Choose problem type:</h1>
 
 <ol>
     {% for level in difficulties %}

@@ -27,7 +27,7 @@ function handleProblemSubmit(event) {
         submitButton.style.display = "none";
         window.setTimeout(() => {
           window.location = data.redirect_to;
-        }, 1500);
+        }, 1000);
       } else {
         answer.value = "";
         answer.style.borderColor = "#FF0000";

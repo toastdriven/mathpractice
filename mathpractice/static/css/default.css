@@ -25,6 +25,12 @@ p, ul, ol {
     margin: 0 0 10px 0;
 }
 
+a,
+a:visited,
+a:hover {
+    color: #0000FF;
+}
+
 header {
     border-bottom: 2px solid #cccccc;
     margin: 20px 0 20px 0;
@@ -72,6 +78,11 @@ content ul {
     margin-left: 20px;
 }
 
+content ol li,
+content ul li {
+    margin-bottom: 5px;
+}
+
 p.giant {
     font-size: 62pt;
     padding: 40px 0 40px 0;
@@ -91,6 +102,28 @@ p.giant {
     font-size: 18pt;
     padding: 10px 20px;
     margin: 0px 20px;
+}
+
+#progress_bar_wrapper {
+    margin: 10px auto 20px auto;
+    text-align: center;
+    width: 410px;
+}
+
+#progress_bar {
+    display: block;
+    border: 1px solid #888888;
+    border-radius: 10px;
+    height: 14px;
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+#progress_percent {
+    background-color: #22CC22;
+    border-radius: 10px;
+    height: 100%;
+    min-width: 1%;
 }
 
 table {

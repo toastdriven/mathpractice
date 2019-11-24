@@ -5,6 +5,8 @@
     Daily Summary for {{ name.capitalize() }}
 </h1>
 
+{% include "includes/progress_bar.html" %}
+
 <table>
     <tr>
         <th>Total Solved:</th>
@@ -30,6 +32,7 @@
             <th>Problem</th>
             <th>Solution</th>
             <th>Attempts</th>
+            <th>Points</th>
             <th>Elapsed Time</th>
         </tr>
     </thead>
@@ -39,6 +42,7 @@
             <td>{{ problem.problem }}</td>
             <td>{{ problem.solution }}</td>
             <td>{{ problem.attempts }}</td>
+            <td>{{ problem.determine_point_value() }}</td>
             <td>{{ "{:0.3f}".format(problem.elapsed) }}</td>
         </tr>
     {% endfor %}

@@ -1,0 +1,12 @@
+{% if progress %}
+<div id="progress_bar_wrapper">
+    <div id="progress_bar">
+        <div id="progress_percent" style="width: {{ progress.percent_complete }}%;">&nbsp;</div>
+    </div>
+    <p>
+        You've earned {{ progress.total_points }}
+        out of {{ progress.target_points }} points!
+        ({{ progress.percent_complete }}%)
+    </p>
+</div>
+{% endif %}
