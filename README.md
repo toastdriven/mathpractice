@@ -11,7 +11,11 @@ To help my kids practice their basic math skills.
 * Purposely doesn't have authentication.
 * Simple in design & implementation.
 
-Meant to be run siloed off in a home network, for 1-to-many people.
+> **Note:** I'm running this app on a Raspberry Pi on my home network,
+> siloed off from the rest of the internet. I'd **highly** recommend doing
+> some similar (either just running locally or home network at most).
+>
+> **DO NOT EXPOSE THIS ON THE BROADER INTERNET!**
 
 
 ## Setup
