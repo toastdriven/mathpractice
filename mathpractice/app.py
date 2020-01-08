@@ -419,9 +419,10 @@ def show_todays_summary(request, name):
     avg_solve_time = 0.0
 
     for problem in problems:
-        total_solved += 1
-        total_attempts += problem.attempts or 0
-        total_solve_time += problem.elapsed or 0
+        if problem.attempts > 0:
+            total_solved += 1
+            total_attempts += problem.attempts or 0
+            total_solve_time += problem.elapsed or 0
 
     if total_solved != 0:
         avg_solve_time = total_solve_time / total_solved
