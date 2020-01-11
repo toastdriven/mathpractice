@@ -401,14 +401,27 @@ def show_problem(request, name, problem_id):
 
 
 @app.get("/<str:name>/summary/")
-def show_todays_summary(request, name):
+def show_summary(request, name):
     if name not in NAMES:
         return error_404(request, name)
 
-    today = datetime.date.today()
+    start_date = datetime.date.today()
+
+    if "date" in request.GET:
+        date_bits = request.GET["date"].split("-")
+        start_date = datetime.date(
+            int(date_bits[0]), int(date_bits[1]), int(date_bits[2])
+        )
+
+    end_date = start_date + datetime.timedelta(days=1)
+
     problems = (
         Problem.select()
-        .where(Problem.solved_by == name, Problem.started_at >= today)
+        .where(
+            Problem.solved_by == name,
+            Problem.started_at >= start_date,
+            Problem.started_at < end_date,
+        )
         .order_by("started_at")
     )
 
